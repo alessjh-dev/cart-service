@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS cart_item (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   cart_id INT NOT NULL,
+   product_id INT NOT NULL,
+   quantity INT NOT NULL DEFAULT 1,
+   FOREIGN KEY (cart_id) REFERENCES cart(id) ON DELETE CASCADE
+);
